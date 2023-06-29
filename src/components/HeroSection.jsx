@@ -16,9 +16,17 @@ const HeroSection = () => {
           {" "}
           <img src={discount} width="32px" height="32px" />
           <p className={`${styles.paragraph} ml-2 `}>
-            Get a <span className="text-white">25%</span> discount for your
-            account <span className="text-white">for your first month!</span>
+            Get a <span className="text-white">25%</span> discount{" "}
+            <span className="text-white">for your first month!</span>
           </p>
+        </div>
+
+        <div className="flex flex-row justify-between items-center w-full">
+          <h1 className="text-white flex-1 font-poppins font-semibold ss:text-[72px] text:[52px] ss:leading-[100px] leading-[75px]">
+            The Next <br className="sm:block" hidden />{" "}
+            <span className="text-gradient">Cutting-edge</span> <br />
+            Payment Solution.
+          </h1>
         </div>
       </div>
     </section>
