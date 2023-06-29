@@ -1,5 +1,3 @@
-import React from "react";
-
 import Billing from "./Billing";
 import Business from "./Business";
 import Button from "./Button";
