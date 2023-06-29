@@ -1,5 +1,6 @@
 import styles from "../style";
 import { discount, robot } from "../assets";
+import GetStarted from "./GetStarted";
 
 const HeroSection = () => {
   return (
@@ -24,9 +25,13 @@ const HeroSection = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="text-white flex-1 font-poppins font-semibold ss:text-[72px] text:[52px] ss:leading-[100px] leading-[75px]">
             The Next <br className="sm:block" hidden />{" "}
-            <span className="text-gradient">Cutting-edge</span> <br />
+            <span className="text-gradient">Disruptive</span> <br />
             Payment Solution.
           </h1>
+
+          <div className="ss:flex hidden md:mr-4 mr-0 ">
+            <GetStarted />
+          </div>
         </div>
       </div>
     </section>
