@@ -25,14 +25,25 @@ const HeroSection = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="text-white flex-1 font-poppins font-semibold ss:text-[72px] text:[52px] ss:leading-[100px] leading-[75px]">
             The Next <br className="sm:block" hidden />{" "}
-            <span className="text-gradient">Disruptive</span> <br />
-            Payment Solution.
+            <span className="text-gradient">Disruptive</span>
+            {""}
           </h1>
 
           <div className="ss:flex hidden md:mr-4 mr-0 ">
             <GetStarted />
           </div>
         </div>
+
+        <h1 className="text-white font-poppins font-semibold ss:text-[68px] text:[52px] ss:leading-[100px] w-full leading-[75px]">
+          Payment Solution.
+        </h1>
+
+        <p>
+          Utilizing a specific approach, our team of specialists applies a
+          methodology to determine the credit cards that are highly suitable for
+          your requirements. We assess the annual percentage rates and annual
+          fees.
+        </p>
       </div>
     </section>
   );
