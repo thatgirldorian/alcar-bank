@@ -29,7 +29,10 @@ const HeroSection = () => {
             {""}
           </h1>
 
-          <div className="ss:flex hidden md:mr-4 mr-0 ">
+          <div
+            className="ss:flex hidden md:mr-4 mr-0
+          "
+          >
             <GetStarted />
           </div>
         </div>
