@@ -7,13 +7,22 @@ const CardDeal = () => {
     <section className={layout.section}>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
-          Find a better card deal <br className="sm:block hidden" /> in a few
-          easy steps.
+          Unlock superior card deals <br className="sm:block hidden" /> with
+          ease, in a few steps.
         </h2>
         <p className={`${styles.paragraph} w-[470px] mt-5`}>
           Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis
           aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
         </p>
+        <Button styles="mt-10" />
+      </div>
+
+      <div className={layout.sectionImg}>
+        <img
+          src={card}
+          alt="card-image"
+          className="w-[100%] h-[100%] relative z-[5]"
+        />
       </div>
     </section>
   );
