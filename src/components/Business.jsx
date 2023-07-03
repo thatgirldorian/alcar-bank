@@ -15,7 +15,7 @@ const Business = () => {
           journey by aiding you in building credit, earning enticing rewards,
           and maximizing savings in the midst of a vast credit card landscape.
         </p>
-        <Button />
+        <Button styles="mt-10" />
       </div>
     </section>
   );
