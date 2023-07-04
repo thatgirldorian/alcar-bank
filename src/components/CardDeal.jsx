@@ -11,8 +11,10 @@ const CardDeal = () => {
           ease, in a few steps.
         </h2>
         <p className={`${styles.paragraph} w-[470px] mt-5`}>
-          Arcu tortor, purus in mattis at sed integer faucibus. Aliquet quis
-          aliquet eget mauris tortor.ç Aliquet ultrices ac, ametau.
+          Our user-friendly process enables you to find and unlock superior card
+          offers, providing you with unmatched benefits and rewards. Start your
+          journey today and experience the simplicity of securing the perfect
+          card deal in just a few easy steps.
         </p>
         <Button styles="mt-10" />
       </div>
