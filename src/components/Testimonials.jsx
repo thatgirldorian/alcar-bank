@@ -1,5 +1,6 @@
 import { feedback } from "../constants";
-import styles, { layout } from "../style";
+import styles from "../style";
+import FeedbackCard from "./FeedbackCard";
 
 const Testimonials = () => {
   return (
@@ -23,7 +24,11 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div></div>
+      <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
+        {feedback.map((card) => (
+          <FeedbackCard key={card.id} {...card} />
+        ))}
+      </div>
     </section>
   );
 };
