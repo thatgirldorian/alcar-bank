@@ -1,7 +1,7 @@
 import {
   people01,
   people02,
-  people03,
+  people04,
   facebook,
   instagram,
   linkedin,
@@ -62,26 +62,26 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
+      "Accepting card payments has been a game-changer for my business. Highly recommended!",
+    name: "Jasmine Lewis",
+    title: "CEO, PostHive",
+    img: people04,
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
+      "Alcar Bank has streamlined my business operations and allowed me to serve my customers better. A fantastic experience overall!",
+    name: "Olivia Wong",
+    title: "Co-founder & COO, Wiggglr",
+    img: people01,
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
+      "Expanding my business globally was a breeze with the guidance and support I received from this Alcar bank. Truly grateful for their services.",
+    name: "Benjamin Davis",
     title: "Founder & Leader",
-    img: people03,
+    img: people02,
   },
 ];
 
