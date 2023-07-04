@@ -16,7 +16,7 @@ const Testimonials = () => {
         </h2>
 
         <div className="w-full md:mt-0 mt-6">
-          <p className={`${styles.paragraph} text-left w-[450px] mt-5`}>
+          <p className={`${styles.paragraph} text-left max-w-[470px] mt-5`}>
             Empower your business to thrive globally with expert knowledge on
             accepting card payments and unlocking boundless growth
             opportunities.
@@ -24,7 +24,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap sm:justify-start justify-center w-full feedback-container relative z-[1]">
+      <div className="flex flex-wrap sm:justify-between justify-center w-full feedback-container relative z-[1]">
         {feedback.map((card) => (
           <FeedbackCard key={card.id} {...card} />
         ))}

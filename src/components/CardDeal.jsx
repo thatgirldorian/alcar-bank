@@ -10,7 +10,7 @@ const CardDeal = () => {
           Unlock superior card deals <br className="sm:block hidden" /> with
           ease, in a few steps.
         </h2>
-        <p className={`${styles.paragraph} w-[470px] mt-5`}>
+        <p className={`${styles.paragraph}  max-w-[470px] mt-5`}>
           Our user-friendly process enables you to find and unlock superior card
           offers, providing you with unmatched benefits and rewards. Start your
           journey today and experience the simplicity of securing the perfect
