@@ -3,6 +3,7 @@ import styles, { layout } from "../style";
 import Button from "./Button";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import PropTypes from "prop-types";
 
 const FeatureInfoCard = ({ icon, title, content, index }) => {
   return (
@@ -32,6 +33,13 @@ const FeatureInfoCard = ({ icon, title, content, index }) => {
       </div>
     </div>
   );
+};
+
+FeatureInfoCard.propTypes = {
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 const Business = () => {
