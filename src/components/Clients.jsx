@@ -8,7 +8,7 @@ const Clients = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     // triggerOnce: true,
-    threshold: 0.1, // Adjust this value to control when the animation triggers
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Clients = () => {
       <div className={`${styles.flexCenter} flex-wrap w-full`}>
         {clients.map((client, index) => (
           <motion.div
-            ref={ref} // Attach the ref to the div
+            ref={ref}
             initial={{ opacity: 0, x: -100 }}
             animate={controls}
             custom={index}

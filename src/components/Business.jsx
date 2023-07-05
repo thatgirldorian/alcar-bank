@@ -37,7 +37,7 @@ const FeatureInfoCard = ({ icon, title, content, index }) => {
 const Business = () => {
   const [ref, inView] = useInView({
     // triggerOnce: true,
-    threshold: 0.1, // Adjust this value to control when the animation triggers
+    threshold: 0.1,
   });
 
   const sectionVariants = {

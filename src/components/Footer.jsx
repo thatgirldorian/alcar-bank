@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
   const [ref, inView] = useInView({
-    threshold: 0.1, // Adjust this value to control when the animation triggers
+    threshold: 0.1,
   });
 
   const variants = {
@@ -15,8 +15,8 @@ const Footer = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8, // Adjust this value to control the duration of the animation
-        ease: "easeOut", // Adjust this value to control the easing of the animation
+        duration: 0.8,
+        ease: "easeOut",
       },
     },
   };
