@@ -1,6 +1,8 @@
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const FeatureInfoCard = ({ icon, title, content, index }) => {
   return (
@@ -33,8 +35,32 @@ const FeatureInfoCard = ({ icon, title, content, index }) => {
 };
 
 const Business = () => {
+  const [ref, inView] = useInView({
+    // triggerOnce: true,
+    threshold: 0.1, // Adjust this value to control when the animation triggers
+  });
+
+  const sectionVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <section id="features" className={layout.section}>
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={sectionVariants}
+      id="features"
+      className={layout.section}
+    >
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
           Focus on your business, <br className="sm:block hidden" /> leave the
@@ -53,7 +79,7 @@ const Business = () => {
           <FeatureInfoCard key={feature.id} {...feature} index={index} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

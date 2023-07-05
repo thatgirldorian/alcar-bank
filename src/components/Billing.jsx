@@ -1,9 +1,35 @@
 import { apple, bill, google } from "../assets";
 import styles, { layout } from "../style";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Billing = () => {
+  const [ref, inView] = useInView({
+    // triggerOnce: true,
+    threshold: 0.1, // Adjust this value to control when the animation triggers
+  });
+
+  const sectionVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <section id="product" className={layout.sectionReverse}>
+    <motion.section
+      id="product"
+      className={layout.sectionReverse}
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={sectionVariants}
+    >
       <div className={layout.sectionImgReverse}>
         <img
           src={bill}
@@ -40,7 +66,7 @@ const Billing = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

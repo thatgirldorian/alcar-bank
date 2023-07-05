@@ -1,10 +1,35 @@
 import { card } from "../assets";
 import styles, { layout } from "../style";
 import Button from "./Button";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const CardDeal = () => {
+  const [ref, inView] = useInView({
+    // triggerOnce: true,
+    threshold: 0.1, // Adjust this value to control when the animation triggers
+  });
+
+  const sectionVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <section className={layout.section}>
+    <motion.section
+      className={layout.section}
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={sectionVariants}
+    >
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
           Unlock superior card deals <br className="sm:block hidden" /> with
@@ -26,7 +51,7 @@ const CardDeal = () => {
           className="w-[100%] h-[100%] relative z-[5]"
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

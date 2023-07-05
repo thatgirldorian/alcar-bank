@@ -1,11 +1,36 @@
 import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const HeroSection = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const sectionVariant = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeInOut" },
+    },
+    hidden: { opacity: 0, scale: 0, x: 200 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <section
       id="home"
+      ref={ref}
       className={`flex md:flex-row flex-col ${styles.paddingY}`}
     >
       <div
@@ -49,7 +74,11 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div
+      <motion.div
+        ref={ref}
+        initial="hidden"
+        animate={control}
+        variants={sectionVariant}
         className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
       >
         <img
@@ -60,7 +89,7 @@ const HeroSection = () => {
         <div className="absolute z-0 w-[40%] h-[35%] top-0 pink__gradient" />
         <div className="absolute z-[1] w-[80%] h-[85%] rounded-full bottom-0 white__gradient" />
         <div className="absolute z-0 w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
-      </div>
+      </motion.div>
 
       <div className={`ss:hidden ${styles.flexCenter}`}>
         <GetStarted />

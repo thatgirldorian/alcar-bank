@@ -1,10 +1,33 @@
 import { feedback } from "../constants";
 import styles from "../style";
 import FeedbackCard from "./FeedbackCard";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Testimonials = () => {
+  const [ref, inView] = useInView({
+    // triggerOnce: true,
+    threshold: 0.1, // Adjust this value to control when the animation triggers
+  });
+
+  const sectionVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.7,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <section
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={sectionVariants}
       id="clients"
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}
     >
@@ -29,7 +52,7 @@ const Testimonials = () => {
           <FeedbackCard key={card.id} {...card} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
