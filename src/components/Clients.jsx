@@ -3,7 +3,7 @@ import styles from "../style";
 
 const Clients = () => {
   return (
-    <section className={`${styles.flexCenter} my-4`}>
+    <section className={`${styles.flexCenter} sm:mt-0 sm:mb-8 my-4 `}>
       <div className={`${styles.flexCenter} flex-wrap w-full`}>
         {clients.map((client) => (
           <div
@@ -13,7 +13,7 @@ const Clients = () => {
             <img
               src={client.logo}
               alt="company-logo"
-              className="sm:w-[192px] w-[100px] object-contain hover:brightness-150 hover:filter hover:invert"
+              className="sm:w-[192px] w-[100px] object-contain hover:brightness-200 hover:filter hover:invert"
             />
           </div>
         ))}
