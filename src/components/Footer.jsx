@@ -1,10 +1,34 @@
 import styles from "../style";
 import { logo } from "../assets";
 import { footerLinks, socialMedia } from "../constants";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Footer = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1, // Adjust this value to control when the animation triggers
+  });
+
+  const variants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8, // Adjust this value to control the duration of the animation
+        ease: "easeOut", // Adjust this value to control the easing of the animation
+      },
+    },
+  };
+
   return (
-    <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
+    <motion.section
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={variants}
+      ref={ref}
+      className={`${styles.flexCenter} ${styles.paddingY} flex-col`}
+    >
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-1 flex flex-col justify-start mr-10">
           <img
@@ -61,7 +85,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

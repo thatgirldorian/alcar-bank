@@ -22,7 +22,7 @@ const Clients = () => {
         },
       }));
     } else {
-      controls.start((i) => ({
+      controls.start(() => ({
         opacity: 0,
         x: -100,
       }));
