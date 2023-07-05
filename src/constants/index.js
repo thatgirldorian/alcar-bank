@@ -105,65 +105,65 @@ export const stats = [
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Helpful Resources",
     links: [
       {
-        name: "Content",
-        link: "https://www.alcarbank.com/content/",
+        name: "About Us",
+        link: "https://www.alcarbank.com/about-resources/",
       },
       {
-        name: "How it Works",
-        link: "https://www.alcarbank.com/how-it-works/",
+        name: "Overview",
+        link: "https://www.alcarbank.com/overview/",
       },
       {
-        name: "Create",
-        link: "https://www.alcarbank.com/create/",
+        name: "Get Started",
+        link: "https://www.alcarbank.com/get-started/",
       },
       {
-        name: "Explore",
-        link: "https://www.alcarbank.com/explore/",
+        name: "Discover",
+        link: "https://www.alcarbank.com/discover/",
       },
       {
-        name: "Terms & Services",
-        link: "https://www.alcarbank.com/terms-and-services/",
+        name: "Terms of Service",
+        link: "https://www.alcarbank.com/terms-of-service/",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Community Hub",
     links: [
       {
-        name: "Help Center",
-        link: "https://www.alcarbank.com/help-center/",
+        name: "Support Center",
+        link: "https://www.alcarbank.com/support-center/",
       },
       {
-        name: "Partners",
-        link: "https://www.alcarbank.com/partners/",
+        name: "Collaborators",
+        link: "https://www.alcarbank.com/collaborators/",
       },
       {
-        name: "Suggestions",
+        name: "Recommendations",
         link: "https://www.alcarbank.com/suggestions/",
       },
       {
-        name: "Blog",
+        name: "Our Blog",
         link: "https://www.alcarbank.com/blog/",
       },
       {
-        name: "Newsletters",
-        link: "https://www.alcarbank.com/newsletters/",
+        name: "Subscribe to Newsletter",
+        link: "https://www.alcarbank.com/newsletter/",
       },
     ],
   },
   {
-    title: "Partner",
+    title: "Partnership Program",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.alcarbank.com/our-partner/",
+        name: "Our Collaborators",
+        link: "https://www.alcarbank.com/our-collaborators/",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.alcarbank.com/become-a-partner/",
+        name: "Join Our Network",
+        link: "https://www.alcarbank.com/join our network/",
       },
     ],
   },
