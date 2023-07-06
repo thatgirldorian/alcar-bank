@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
@@ -27,8 +26,7 @@ const NavBar = () => {
         <img
           src={toggle ? close : menu}
           alt="menu-toggle"
-          className="w-[28px] h-[28px]"
-          object-contain="true"
+          className="w-[28px] h-[28px] object-contain"
           onClick={() => setToggle((prev) => !prev)}
         />
 
